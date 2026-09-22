@@ -16,12 +16,12 @@ type PriorityItem = {
 };
 
 const priorities: PriorityItem[] = [
-  { icon: Users,         title: "Engineers' Rights, Dignity & Recognition" },
-  { icon: TrendingUp,    title: "Professional Development" },
-  { icon: Link2,         title: "Industry–Academia–Government Collaboration" },
-  { icon: ShieldCheck,   title: "Young Engineers' Participation" },
-  { icon: MessageSquare, title: "Member Engagement & Transparency" },
-  { icon: Globe2,        title: "Inclusive Professional Representation" },
+  { icon: Users,         title: "Engineers' Rights, Dignity & Welfare" },
+  { icon: TrendingUp,    title: "Professional Development & Knowledge Sharing" },
+  { icon: Link2,         title: "Collaboration: Senior & Young Engineers" },
+  { icon: ShieldCheck,   title: "Young Engineers' Empowerment" },
+  { icon: MessageSquare, title: "Inclusive Member Engagement" },
+  { icon: Globe2,        title: "National Development through Engineering" },
 ];
 
 export default function VisionPriorities() {
@@ -49,9 +49,7 @@ export default function VisionPriorities() {
               <Target size={17} strokeWidth={2.1} color="#fff" aria-hidden="true" />
             </div>
             <p className="text-[14.5px] font-semibold italic leading-[1.45] text-[#173b5c]">
-              &ldquo;To contribute to a united, inclusive, and professionally
-              empowered engineering community where every engineer is respected,
-              recognized, and supported.&rdquo;
+              &ldquo;A stronger, inclusive, and forward-looking IEB focused on professional excellence, engineers' development, and national progress.&rdquo;
             </p>
           </div>
         </div>

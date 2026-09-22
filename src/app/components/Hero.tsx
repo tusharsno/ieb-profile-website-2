@@ -25,7 +25,9 @@ export default function Hero() {
 
   useEffect(() => {
     setMounted(true);
-    const onScroll = () => setScrollY(window.scrollY);
+    const onScroll = () => {
+      if (window.innerWidth >= 1024) setScrollY(window.scrollY);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -196,8 +198,8 @@ export default function Hero() {
           }}
         >
           <Image
-            src="/images/profile/arif-hasan-chowdhury.png"
-            alt="Engr. Mohammed Arif Hasan Chowdhury"
+            src="/images/profile/harun-pic.png"
+            alt="Engr. Mohammad Harun"
             fill
             priority
             sizes="(min-width: 1024px) 23vw, (min-width: 640px) 60vw, 72vw"
@@ -353,7 +355,7 @@ export default function Hero() {
                   lg:text-[13.5px]
                 "
               >
-                UNITY&nbsp;&nbsp;•&nbsp;&nbsp;DIGNITY&nbsp;&nbsp;•&nbsp;&nbsp;PROFESSIONAL EXCELLENCE
+                PROFESSIONAL EXCELLENCE • UNITY • SERVICE • PROGRESS
               </p>
               <div className="h-[2px] w-[20px] shrink-0 rounded-full" style={{ background: "linear-gradient(90deg, #c97d10, #e8a020)" }} />
             </div>
@@ -366,7 +368,6 @@ export default function Hero() {
                 font-extrabold
                 leading-[1.03]
                 tracking-[-0.018em]
-                whitespace-nowrap
 
                 sm:text-[26px]
 
@@ -379,7 +380,7 @@ export default function Hero() {
                 backgroundClip: "text",
               }}
             >
-              ENGR. MOHAMMED ARIF HASAN CHOWDHURY
+              ENGR. MOHAMMAD HARUN
             </h1>
 
             {/* Position badge */}
@@ -392,7 +393,7 @@ export default function Hero() {
                 }}
               >
                 <span aria-hidden="true" style={{ display: "inline-block", width: 6, height: 6, borderRadius: "50%", background: "#e8a020", boxShadow: "0 0 5px rgba(232,160,32,0.75)", flexShrink: 0 }} />
-                LOCAL COUNCIL MEMBER
+                VICE CHAIRMAN CANDIDATE
               </span>
             </div>
 
@@ -412,22 +413,21 @@ export default function Hero() {
               <div className="flex items-center gap-[10px] px-[12px] py-[7px]">
                 <span aria-hidden="true" className="h-[26px] w-[3px] shrink-0 rounded-full" style={{ background: "linear-gradient(180deg,#e8a020,#c97d10)" }} />
                 <p className="text-[13.5px] font-semibold leading-[1.3] text-[#1a3a52] lg:text-[14px]">
-                  <strong className="font-extrabold text-[#07518a]">AEB Panel</strong>
-                  {" — "}Association of Engineers Bangladesh
-                </p>
-              </div>
-              <div className="mx-[12px] h-px bg-[#d4e8f5]/90" />
-              <div className="flex items-center gap-[10px] px-[12px] py-[7px]">
-                <span aria-hidden="true" className="h-[26px] w-[3px] shrink-0 rounded-full" style={{ background: "linear-gradient(180deg,#e8a020,#c97d10)" }} />
-                <p className="text-[13.5px] font-semibold text-[#1a3a52] lg:text-[14px]">
-                  IEB Fellow{" "}<strong className="font-extrabold text-[#07518a]">F14663</strong>
+                  <strong className="font-extrabold text-[#07518a]">Fellow No. F/06550</strong>
                 </p>
               </div>
               <div className="mx-[12px] h-px bg-[#d4e8f5]/90" />
               <div className="flex items-center gap-[10px] px-[12px] py-[7px]">
                 <span aria-hidden="true" className="h-[26px] w-[3px] shrink-0 rounded-full" style={{ background: "linear-gradient(180deg,#07518a,#0a6aad)" }} />
                 <p className="text-[13.5px] font-semibold text-[#1a3a52] lg:text-[14px]">
-                  Ballot No:{" "}<strong className="font-extrabold text-[#07518a]">—</strong>
+                  Education: <strong className="font-extrabold text-[#07518a]">B.Sc. Eng. (Electrical), CUET, 1981</strong>
+                </p>
+              </div>
+              <div className="mx-[12px] h-px bg-[#d4e8f5]/90" />
+              <div className="flex items-center gap-[10px] px-[12px] py-[7px]">
+                <span aria-hidden="true" className="h-[26px] w-[3px] shrink-0 rounded-full" style={{ background: "linear-gradient(180deg,#e8a020,#c97d10)" }} />
+                <p className="text-[13.5px] font-semibold text-[#1a3a52] lg:text-[14px]">
+                  IEB Experience: <strong className="font-extrabold text-[#07518a]">Council Member (multiple terms)</strong>
                 </p>
               </div>
             </div>
@@ -449,7 +449,7 @@ export default function Hero() {
               >
                 <CalendarDays size={12} strokeWidth={2.5} className="shrink-0 text-[#07518a]" />
                 <span className="text-[12.5px] font-semibold text-[#164b75] lg:text-[13px]">
-                  Election: <strong className="font-extrabold text-[#07518a]">2026–27</strong>
+                  Election: <strong className="font-extrabold text-[#07518a]">2026</strong>
                 </span>
               </div>
             </div>
@@ -462,11 +462,14 @@ export default function Hero() {
                 style={{ background: "linear-gradient(135deg,#07518a 0%,#0a6aad 100%)", boxShadow: "0 2px 8px rgba(7,81,138,0.28)" }}
               >
                 <ThumbsUp size={14} strokeWidth={2.3} className="shrink-0" />
-                <span>Support Me</span>
+                <span>Support My Campaign</span>
               </Link>
               <a
                 href="/profile.pdf"
-                className="flex h-[37px] shrink-0 items-center justify-center gap-[6px] rounded-[4px] border border-[#c97d10]/70 bg-white/80 px-[17px] text-[13.5px] font-bold text-[#c97d10] transition-all hover:bg-white hover:border-[#c97d10] lg:text-[14px]"
+                aria-disabled="true"
+                onClick={(e) => e.preventDefault()}
+                className="flex h-[37px] shrink-0 items-center justify-center gap-[6px] rounded-[4px] border border-[#c97d10]/40 bg-white/50 px-[17px] text-[13.5px] font-bold text-[#c97d10]/50 cursor-not-allowed select-none lg:text-[14px]"
+                title="Profile PDF coming soon"
               >
                 <Download size={14} strokeWidth={2.3} className="shrink-0" />
                 <span>Download Profile</span>

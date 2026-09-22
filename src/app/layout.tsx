@@ -15,8 +15,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arif Hasan Chowdhury — IEB Council Candidate",
-  description: "Official campaign website for Arif Hasan Chowdhury, candidate for the Institution of Engineers, Bangladesh (IEB) Council.",
+  title: "Engr. Mohammad Harun — IEB Vice Chairman Candidate",
+  description: "Official campaign website for Engr. Mohammad Harun, candidate for Vice Chairman of the Institution of Engineers, Bangladesh (IEB) Chittagong Centre.",
+  openGraph: {
+    title: "Engr. Mohammad Harun — IEB Vice Chairman Candidate",
+    description: "Official campaign website for Engr. Mohammad Harun, candidate for Vice Chairman of the Institution of Engineers, Bangladesh (IEB) Chittagong Centre.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Engr. Mohammad Harun — IEB Vice Chairman Candidate",
+    description: "Official campaign website for Engr. Mohammad Harun, candidate for Vice Chairman of the Institution of Engineers, Bangladesh (IEB) Chittagong Centre.",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

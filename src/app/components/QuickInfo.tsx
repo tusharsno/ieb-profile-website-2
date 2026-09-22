@@ -1,49 +1,3 @@
-// import { User, Award, Users, MapPin, Briefcase, BookOpen } from "lucide-react";
-
-// const infoItems = [
-//   { icon: User,      label: "Name",         value: "Engr. Mohammed Arif Hasan Chowdhury" },
-//   { icon: Award,     label: "Position",     value: "Local Council Member" },
-//   { icon: Award,     label: "Membership",   value: "F14663 (Fellow)" },
-//   { icon: Users,     label: "Panel",        value: "AEB Panel" },
-//   { icon: MapPin,    label: "IEB Centre",   value: "Chittagong" },
-//   { icon: Briefcase, label: "Profession",   value: "Academic & IT Professional" },
-//   { icon: Briefcase, label: "Current Role", value: "Assistant Professor, Dept. of CSE, USTC" },
-//   { icon: Award,     label: "Experience",   value: "15+ Years" },
-//   { icon: BookOpen,  label: "Expertise",    value: "Software Engineering, Health Informatics, Business Intelligence, ML" },
-// ];
-
-// export default function QuickInfo() {
-//   return (
-//     <div className="w-64 shrink-0 rounded-lg overflow-hidden shadow-sm bg-white flex flex-col border border-gray-100">
-//       <div className="bg-[#003d7a] px-4 py-2">
-//         <h2 className="text-white font-semibold text-[11px] tracking-wide uppercase">
-//           Quick Information
-//         </h2>
-//       </div>
-//       <ul className="divide-y divide-gray-100 flex-1">
-//         {infoItems.map(({ icon: Icon, label, value }) => (
-//           <li key={label} className="flex items-start gap-2 px-3 py-2">
-//             <Icon size={12} className="text-[#003d7a] shrink-0 mt-0.5" />
-//             <div className="min-w-0">
-//               <p className="text-[9px] text-gray-400 uppercase tracking-wide leading-none mb-0.5">{label}</p>
-//               <p className="text-[11px] text-gray-700 font-medium leading-snug">{value}</p>
-//             </div>
-//           </li>
-//         ))}
-//       </ul>
-//       <div className="px-3 py-2.5 bg-gray-50 border-t border-gray-100">
-//         <a
-//           href="/contact"
-//           className="block w-full text-center bg-[#003d7a] hover:bg-[#002d5a] text-white text-[11px] font-semibold py-1.5 rounded transition-colors"
-//         >
-//           Get in Touch
-//         </a>
-//       </div>
-//     </div>
-//   );
-// }
-
-
 import {
   Award,
   BookOpen,
@@ -66,22 +20,22 @@ const infoItems: InfoItem[] = [
   {
     icon: User,
     label: "Name",
-    value: "Engr. Mohammed Arif Hasan Chowdhury",
+    value: "Engr. Mohammad Harun",
   },
   {
     icon: Award,
     label: "Position",
-    value: "Local Council Member",
+    value: "Vice Chairman Candidate",
   },
   {
     icon: Award,
-    label: "Membership",
-    value: "F14663 (Fellow)",
+    label: "Fellow No.",
+    value: "F/06550",
   },
   {
     icon: Users,
-    label: "Panel",
-    value: "AEB Panel",
+    label: "IEB Panel",
+    value: "Chittagong Centre",
   },
   {
     icon: MapPin,
@@ -91,28 +45,27 @@ const infoItems: InfoItem[] = [
   {
     icon: Briefcase,
     label: "Profession",
-    value: "Academic & IT Professional",
+    value: "Electrical Engineer",
   },
   {
     icon: GraduationCap,
     label: "Education",
-    value: "Ph.D. Fellow (JU), M.Sc. Sweden, B.Sc. (IIUC)",
+    value: "B.Sc. Eng. (Electrical), CUET, 1981",
   },
   {
     icon: Briefcase,
     label: "Current Role",
-    value: "Assistant Professor, Dept. of CSE, USTC",
+    value: "Ex-Superintending Engineer, BPDB",
   },
   {
     icon: Award,
     label: "Experience",
-    value: "15+ Years",
+    value: "35+ Years",
   },
   {
     icon: BookOpen,
-    label: "Expertise",
-    value:
-      "Software Engineering, Health Informatics, Business Intelligence, ML",
+    label: "IEB Experience",
+    value: "Council Member (multiple terms); Joint-Convener, Training & PD (2018–19)",
   },
 ];
 
@@ -120,7 +73,7 @@ export default function QuickInfo() {
   return (
     <aside
       className="
-        h-full
+        flex flex-col
         overflow-hidden
         rounded-[5px]
         border border-[#d9e4ed]
@@ -163,12 +116,7 @@ export default function QuickInfo() {
               gap-x-[6px]
               px-[12px]
               py-[7px]
-
-              ${
-                index < infoItems.length - 1
-                  ? "border-b border-[#e4ebf1]"
-                  : ""
-              }
+              ${index < infoItems.length - 1 ? "border-b border-[#e4ebf1]" : ""}
             `}
           >
             <Icon
@@ -210,7 +158,7 @@ export default function QuickInfo() {
       </div>
 
       {/* Contact button */}
-      <div className="px-[12px] pb-[9px] pt-[6px]">
+      <div className="px-[12px] pb-[10px] pt-[8px] border-t border-[#e4ebf1]">
         <a
           href="/contact"
           className="

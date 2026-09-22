@@ -2,10 +2,10 @@ import { Users, GraduationCap, BookOpen, Globe } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const stats: { icon: LucideIcon; value: string; label: string; accentBlue: boolean }[] = [
-  { icon: Users,          value: "15+",            label: "Years of Professional Experience",     accentBlue: true  },
-  { icon: GraduationCap, value: "2",               label: "International Degrees",                accentBlue: false },
-  { icon: BookOpen,       value: "Research",        label: "Projects in ICT & Health Informatics", accentBlue: true  },
-  { icon: Globe,          value: "Global Exposure", label: "Bangladesh · Sweden · UNDP · UNITAR", accentBlue: false },
+  { icon: Users,          value: "35+",        label: "Years of Professional Experience",   accentBlue: true  },
+  { icon: GraduationCap, value: "CUET 1981",   label: "B.Sc. Eng. (Electrical)",            accentBlue: false },
+  { icon: BookOpen,       value: "IEB Council", label: "Multiple Terms as Council Member",  accentBlue: true  },
+  { icon: Globe,          value: "BPDB",        label: "Bangladesh Power Development Board", accentBlue: false },
 ];
 
 export default function StatsStrip() {

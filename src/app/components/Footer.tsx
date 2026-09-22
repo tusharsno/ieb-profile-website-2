@@ -118,10 +118,10 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex w-full max-w-full flex-wrap items-center justify-between gap-2 px-4 py-[9px] sm:px-6 lg:max-w-[1200px] xl:max-w-[1320px]">
           <p className="text-[12.5px] text-white/40">
-            © {new Date().getFullYear()} Engr. Mohammed Arif Hasan Chowdhury. All rights reserved.
+            © {new Date().getFullYear()} Engr. Mohammad Harun. All rights reserved.
           </p>
           <p className="text-[12.5px] text-white/40">
-            IEB Local Council Member — Chittagong Centre
+            IEB Vice Chairman Candidate — Chittagong Centre
           </p>
         </div>
       </div>

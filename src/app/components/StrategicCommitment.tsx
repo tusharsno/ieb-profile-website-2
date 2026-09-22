@@ -1,12 +1,12 @@
 import { Shield, TrendingUp, Link2, Users, MessageSquare, Globe } from "lucide-react";
 
 const commitments = [
-  { icon: Shield,        title: "Engineers' Rights, Dignity & Recognition" },
-  { icon: TrendingUp,    title: "Professional Development" },
-  { icon: Link2,         title: "Industry–Academia–Government Collaboration" },
-  { icon: Users,         title: "Young Engineers' Participation" },
-  { icon: MessageSquare, title: "Member Engagement & Transparency" },
-  { icon: Globe,         title: "Inclusive Professional Representation" },
+  { icon: Shield,        title: "Professional Development" },
+  { icon: TrendingUp,    title: "Young Engineers' Empowerment" },
+  { icon: Link2,         title: "Engineers' Welfare & Dignity" },
+  { icon: Users,         title: "Technical Knowledge & Innovation" },
+  { icon: MessageSquare, title: "Inclusive Member Engagement" },
+  { icon: Globe,         title: "Stronger Professional Networking" },
 ];
 
 export default function StrategicCommitment() {

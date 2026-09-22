@@ -24,7 +24,16 @@ export default function Header() {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 18);
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("keydown", onKeyDown);
+    };
   }, []);
 
   return (
@@ -157,10 +166,19 @@ export default function Header() {
         </button>
       </div>
 
+      {/* Backdrop for outside click */}
+      {menuOpen && (
+        <div
+          className="fixed inset-0 z-40 lg:hidden"
+          aria-hidden="true"
+          onClick={() => setMenuOpen(false)}
+        />
+      )}
+
       {/* Mobile dropdown — animated */}
       <div
         className={`
-          lg:hidden overflow-hidden
+          relative z-50 lg:hidden overflow-hidden
           transition-all duration-300 ease-in-out
           ${ menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0" }
         `}

@@ -14,15 +14,15 @@ const galleryPlaceholders = Array.from({ length: 3 }, (_, i) => i + 1);
 
 const contactItems = [
   { icon: Phone,  label: "+880 1XXX XXXXXXX",           href: "tel:+8801XXXXXXXXX" },
-  { icon: Mail,   label: "arif.chowdhury@ustc.ac.bd",   href: "mailto:arif.chowdhury@ustc.ac.bd" },
-  { icon: Link2,  label: "linkedin.com/in/arif-chowdhury", href: "https://linkedin.com/in/arif-chowdhury" },
-  { icon: Globe,  label: "www.arifchowdhury.com",        href: "https://www.arifchowdhury.com" },
+  { icon: Mail,   label: "harun.ee.cuet@gmail.com",     href: "mailto:harun.ee.cuet@gmail.com" },
+  { icon: Link2,  label: "linkedin.com/in/mohammad-harun", href: "https://linkedin.com/in/mohammad-harun" },
+  { icon: Globe,  label: "www.mohammadharun.com",        href: "https://www.mohammadharun.com" },
   { icon: MapPin, label: "Chittagong, Bangladesh",       href: "#" },
 ];
 
 const socialLinks = [
   { label: "Facebook",      bg: "#1769aa", text: "f",  href: "#",                                    textSize: "text-[13px]" },
-  { label: "LinkedIn",      bg: "#0a66c2", text: "in", href: "https://linkedin.com/in/arif-chowdhury", textSize: "text-[10px]" },
+  { label: "LinkedIn",      bg: "#0a66c2", text: "in", href: "https://linkedin.com/in/mohammad-harun", textSize: "text-[10px]" },
   { label: "X",             bg: "#000000", text: "X",  href: "#",                                    textSize: "text-[10px]" },
 ];
 
